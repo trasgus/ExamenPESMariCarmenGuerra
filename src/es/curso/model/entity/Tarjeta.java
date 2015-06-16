@@ -4,14 +4,14 @@ public class Tarjeta {
 	private int id;
 	private String numero;
 	private int cupoMaximo;
+	private int cupoDisponible; 
 	private String tipo;
 	private String numeroComprobacion;
 	private String contrasenha;
-	private String claveVerificacion;
+
 	private boolean bloqueada;
 	
-	private int pago;
-	public static int cupoDisponible;
+
 	
 	
 	
@@ -20,45 +20,26 @@ public class Tarjeta {
 	}
 
 
-	public Tarjeta(int id, String numero, int cupoMaximo, String tipo,  //constructor lleno
-			String numeroComprobacion, String contrasenha, String claveVerificacion, boolean bloqueada) {
+	public Tarjeta(int id, String numero, int cupoMaximo, int cupoDisponible, String tipo,  //constructor lleno
+			String numeroComprobacion, String contrasenha, boolean bloqueada) {
 		super();
 		this.id = id;
 		this.numero = numero;
 		this.cupoMaximo = cupoMaximo;
+		this.cupoDisponible= cupoDisponible;
 		this.tipo = tipo;
 		this.numeroComprobacion = numeroComprobacion;
 		this.contrasenha = contrasenha;
-		this.claveVerificacion = claveVerificacion;
 		this.bloqueada = bloqueada;
 	}
 
-	public int calcularCupoDisponible(){    //otro método
-		cupoDisponible = getCupoMaximo() - getPago();
-		return cupoDisponible;
-		
-	}
-	
-	
+//	public int calcularCupoDisponible(){    //otro método
+//		cupoDisponible = getCupoMaximo() - getPago();
+//		return cupoDisponible;
+//		
+//	}
+//	
 
-	public String getClaveVerificacion() {
-		return claveVerificacion;
-	}
-
-
-	public void setClaveVerificacion(String claveVerificacion) {
-		this.claveVerificacion = claveVerificacion;
-	}
-
-
-	public int getPago() {
-		return pago;
-	}
-
-
-	public void setPago(int pago) {
-		this.pago = pago;
-	}
 
 
 	public int getId() {     //getters and setters
@@ -131,14 +112,24 @@ public class Tarjeta {
 	}
 
 
-	@Override     //toString
+	@Override
 	public String toString() {
 		return "Tarjeta [id=" + id + ", numero=" + numero + ", cupoMaximo="
-				+ cupoMaximo + ", tipo=" + tipo + ", numeroComprobacion="
-				+ numeroComprobacion + ", contrasenha=" + contrasenha
-				+ ", bloqueada=" + bloqueada + "]";
+				+ cupoMaximo + ", cupoDisponible=" + cupoDisponible + ", tipo="
+				+ tipo + ", numeroComprobacion=" + numeroComprobacion
+				+ ", contrasenha=" + contrasenha + ", bloqueada=" + bloqueada
+				+ "]";
 	}
 
-	
+
+	public int getCupoDisponible() {
+		return cupoDisponible;
+	}
+
+
+	public void setCupoDisponible(int cupoDisponible) {
+		this.cupoDisponible = cupoDisponible;
+	}
+
 	
 }

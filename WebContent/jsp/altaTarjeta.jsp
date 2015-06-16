@@ -21,8 +21,8 @@
     <label>Password:</label>
     <input type="password" name="clave" id="clave"/>
     
-    <label>Código de verificación:</label>
-    <input type="text" name="claveVerificacion" id="claveVerificacion"/>
+    <label>Número de Comprobación:</label>
+    <input type="text" name="numeroComprobacion" id="numeroComprobacion"/>
     
     <label>Cantidad a Pagar:</label>
     <input type="text" name="cantidad" id="cantidad"/>

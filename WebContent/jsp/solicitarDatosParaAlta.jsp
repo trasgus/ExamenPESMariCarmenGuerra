@@ -9,7 +9,7 @@
 </head>
 <body>    
     
-<form method="post" action="${pageContext.request.contextPath}/TarjetaCredito/darAlta" name="darAltaTarjeta"> 
+<form method="post" action="${pageContext.request.contextPath}/TarjetaCredito/darAltaTarjeta" name="darAltaTarjeta"> 
 <!-- enlace con # se queda en la misma página -->
     <fieldset>
     <label>SOLICITAR DATOS:</label>
@@ -17,8 +17,8 @@
     <label>Numero Tarjeta:</label>
     <input type="text" name="numero" id="numero"/>
     <br/>
-    <label>Cupo Maximo:</label>
-    <input type="text" name="cupoMaximo" id="cupoMaximo"/>
+    <label>Cupo disponible:</label>
+    <input type="text" name="cupoDisponible" id="cupoDisponible"/>
     <br/>
      <label>Tipo:</label>
     <input type="text" name="tipo" id="tipo"/>
@@ -34,9 +34,7 @@
     <br/>
     <input type="radio" name="bloqueada" id="bloqueada" value="desbloqueada"/><p>Desbloqueada</p>
     <br/>
-    <label>Cantidad a Pagar:</label>
-    <input type="text" name="cantidad" id="cantidad"/>
-    <br/>
+   
     <input type="submit" name="enviar" value="enviar"/>
     <input type="reset" name="reiniciar" value="Reiniciar"/>
     </fieldset>
